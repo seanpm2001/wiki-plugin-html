@@ -18,9 +18,9 @@ builtins = {
     let foundLocally = false
 
     Object.keys(wiki.neighborhoodObject.sites).forEach((site, index) => {
-      info = wiki.neighborhoodObject.sites[site]
+      const info = wiki.neighborhoodObject.sites[site]
       if (info.sitemap != null) {
-        result = info.sitemap.find(element => element.slug == slug)
+        const result = info.sitemap.find(element => element.slug == slug)
         if (result != null) {
           if (index == 0) {foundLocally = true}
           hits.push({
